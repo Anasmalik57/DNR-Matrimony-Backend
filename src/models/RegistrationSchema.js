@@ -38,15 +38,7 @@ const RegistrationSchema = new mongoose.Schema({
   educationQualification: {
     type: String,
     required: [true, 'Education qualification is required'],
-    enum: [
-      'High School',
-      'Intermediate',
-      'Graduate',
-      'Post Graduate',
-      'Diploma',
-      'PhD',
-      'Other'
-    ]
+    trim: true,
   },
   
   EmployementType: {
@@ -59,7 +51,7 @@ const RegistrationSchema = new mongoose.Schema({
   marriageType: {
     type: String,
     required: [true, 'Marriage type is required'],
-    enum: ['Love Marriage', 'Arranged Marriage', 'Court Marriage', 'Other']
+    trim: true
   },
   
   gender: {
